@@ -17,7 +17,7 @@ addons:
 
 after_success:
   - ./gradlew cobertura coveralls
-
+  - bash <(curl -s https://copilot.blackducksoftware.com/ci/travis/scripts/upload)
 cache:
   directories:
     - $HOME/.m2
